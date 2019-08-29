@@ -15,13 +15,11 @@ namespace CoreKnowledge.Controllers
     {
         private readonly AppDbContext appDb;
         private readonly ISeacrhService _search;
-        private readonly IHostingEnvironment _host;
 
-        public HomeController(AppDbContext app, ISeacrhService search, IHostingEnvironment host)
+        public HomeController(AppDbContext app, ISeacrhService search)
         {
             appDb = app;
             _search = search;
-            _host = host;
         }
 
         [HttpGet]
