@@ -22,11 +22,10 @@ namespace CoreKnowledge
         public Startup(IConfiguration config, IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
-                          .SetBasePath(Directory.GetCurrentDirectory())
-                          .AddJsonFile("appsettings.json", optional: false,
-                                        reloadOnChange: true)
-                          .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
-                          .AddEnvironmentVariables();
+                                                    .SetBasePath(Directory.GetCurrentDirectory())
+                                                    .AddJsonFile("appsettings.json", optional: false,  reloadOnChange: true)
+                                                    .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
+                                                    .AddEnvironmentVariables();
             Configuration = builder.Build();    
         }
 

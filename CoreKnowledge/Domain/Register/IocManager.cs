@@ -21,6 +21,7 @@ namespace CoreKnowledge.Domain.Register
             //services.AddTransient();
             #endregion  LifeTime
 
+            #region       ServicesRegistration
 
             var options = configuration.Get<CoreKnowledgeOptions>();
 
@@ -33,6 +34,7 @@ namespace CoreKnowledge.Domain.Register
             var SeacrhEngine = Assembly.GetEntryAssembly().GetType(options.SearchEngine.Provider);
             services.AddScoped(typeof(ISeacrhService), SeacrhEngine);
 
+            #endregion    ServicesRegistration
 
         }
     }
