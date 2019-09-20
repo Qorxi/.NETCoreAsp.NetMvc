@@ -28,8 +28,7 @@ namespace CoreKnowledge.Domain.Services.Middlewares.CustomServices
             }
             catch (Exception ex)
             {
-                var loggert = context.RequestServices.GetService<IExceptionProvider>();
-                loggert.Write(ex);
+                logger.Write(ex);
                 context.Response.Clear();
                 context.Response.StatusCode = 500;
                 context.Response.ContentType = "application/json; charset=utf-8";
