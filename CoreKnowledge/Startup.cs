@@ -19,7 +19,7 @@ namespace CoreKnowledge
     {
         private IConfiguration Configuration { get; set; }
 
-        public Startup(IConfiguration config, IHostingEnvironment env)
+        public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
                                                     .SetBasePath(Directory.GetCurrentDirectory())
