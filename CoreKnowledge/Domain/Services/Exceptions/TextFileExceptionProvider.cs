@@ -13,8 +13,8 @@ namespace CoreKnowledge.Domain.Services.Exceptions
         public void Write(Exception exception)
         {
             var st = new StringBuilder();
-            st.AppendLine($"Message : {exception.Message}");
-            st.AppendLine($"Stack trace: {exception.StackTrace}");
+            st.AppendLine($"Message     : {exception.Message}");
+            st.AppendLine($"Stack trace : {exception.StackTrace}");
 
 
             File.WriteAllText($@"D:\Core\{DateTime.Now.Year + "_" + DateTime.Now.Month + "_" + DateTime.Now.Day}.txt", st.ToString());
