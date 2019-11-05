@@ -15,7 +15,7 @@ namespace CoreKnowledge.Domain.Services.Exceptions
         public void Write(Exception exception)
         {
             var st = new StringBuilder();
-            st.AppendLine($"Message     : {exception.Message   }");
+            st.AppendLine($"Message     : {exception.Message }");
             st.AppendLine($"Stack trace : {exception.StackTrace}");
 
             var json = JsonConvert.SerializeObject(st);
