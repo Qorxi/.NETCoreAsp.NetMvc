@@ -29,7 +29,7 @@ namespace CoreKnowledge.Domain.Services.Components
 
             _contex.LocalSearchable.Where(item => item.SearchLocal.Contains(term)).ToList().ForEach(item =>
             {
-                sb.AppendLine(item.SearchLocal.TrimEnd().TrimStart());
+                sb.AppendLine(item.SearchLocal.Trim());
             });
             search.ResultText = sb.ToString();
 
