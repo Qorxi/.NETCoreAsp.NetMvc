@@ -14,12 +14,12 @@ namespace CoreKnowledge.Domain.Register
     {
         public static void Register(IServiceCollection services, IConfiguration configuration)
         {
-            #region     LifeTime
+            #region       LifeTime
             //services.AddTransient<>();
             //services.AddScoped<>();
             //services.AddSingleton<>();
             //services.AddTransient();
-            #endregion  LifeTime
+            #endregion    LifeTime
 
             #region       ServicesRegistration
 
